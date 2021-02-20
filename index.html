@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <title>Iframe</title>
+</head>
+<body>
+    <div class="musicPlayer">
+        <div class="podcast">
+    
+            <audio id="music">
+                <source src="./assets/audio/audio.ogg" type="audio/ogg">
+                <source src="./assets/audio/audio.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="controls">
+            <progress id="seekBar" onclick="jump()" value="0" max="1"></progress>
+            <img class="btn" onclick="play_song()" src="./assets/images/play.png" alt="">
+            <img class="btn" onclick="pause_song() "src="./assets/images/pause.png" alt="">
+            <img class="btn" onclick="stop_song() "src="./assets/images/stop.png" alt="">
+            <img class="btn" onclick="fast_rewind() "src="./assets/images/fast_rewind.png" alt="">
+            <img class="btn" onclick="fast_forward() "src="./assets/images/fast_forward.png" alt="">
+            <img class="btn" id="mute" onclick="mute_unmute() "src="./assets/images/unmute.png" alt="">
+        </div>
+        <div class="volumeController">
+            <input class="slider" id="volumeRange" oninput="adjust_volume()" type="range" min="0" max="100" value="100">
+        </div>
+        <div id="sliderValue">100</div>
+    </div>
+   
+<script src="./scripts/script.js"></script>
+</body>
+</html>
